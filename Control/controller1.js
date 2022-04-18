@@ -1,14 +1,27 @@
 const express = require(`express`)
 const router = express();
 
-const dataModel1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+//model
+const model1 = require(`../Model/model1`)
 
 //index route
 router.get(`/`, (req, res) => {
     // res.send(`controller1 index`)
-    res.render(`./1/index.ejs`, {
-        dataModel1: dataModel1
-    })
+    try {
+        res.render(`./1/index.ejs`, {
+            model1: model1
+        })
+    } catch(error) {
+        res.send({
+            message: error
+        })
+    }
 })
+
+//create route
+router.post(`/`, (req, res) => {
+
+})
+
 
 module.exports = router
