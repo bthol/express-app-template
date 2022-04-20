@@ -2,7 +2,7 @@ const mongoose = require(`mongoose`)
 const Schema = mongoose.Schema;
 
 const schema = new Schema ({
-    arr: {type: [Number], default: [1, 2, 3, 4, 5]},
+    arr: {type: [Number] },
     date: { type: Date, default: Date.now }
 }, {timeStamps: false});
 
