@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <ul class="nestedObject1-data">
+        <%for(let y = 0: y < nestedObject1.length; y++) {%>
+            <%for(let x = 0: x < nestedObject1[y].length; x++) {%>
+                <li><a href="/:<%=nestedObject1[y][x].key1%>"><%=nestedObject1[y][x].key1%></a></li>
+                <li><a href="/:<%=nestedObject1[y][x].key2%>"><%=nestedObject1[y][x].key2%></a></li>
+            <%}%>
+        <%}%>
+    </ul>
+</body>
+</html>

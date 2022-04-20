@@ -10,7 +10,7 @@
     <h1>Index Page</h1>
     <p>if you are reading this, you are displaying the index ejs file</p>
     <ul class="model1Data">
-        <%model1.arr.forEach((i) => {%>
+        <%model1.forEach((i) => {%>
             <li><a href="/data/<%i%>"><%=i%></a></li>
         <%});%>
     </ul>
